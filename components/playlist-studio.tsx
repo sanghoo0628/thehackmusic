@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import type { GenerateOptions, GenerationMode, Playlist, Song } from "../types/music";
 import { generatePlaylist, isPreview, loadPlaylists, savePlaylist, songs } from "./music-services";
+import { SongLibrary } from "./song-library";
 
 const modes: { value: GenerationMode; label: string }[] = [
   { value: "artist", label: "가수별" }, { value: "genre", label: "장르별" },
@@ -127,6 +128,7 @@ export function PlaylistStudio() {
           </>}
         </section>
       </div>
+      <SongLibrary songs={songs} />
       <footer>모음 · 작은 취향들이 모여, 나만의 음악이 됩니다.</footer>
     </main>
   );

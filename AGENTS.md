@@ -13,3 +13,13 @@
 - 역할이 지정되지 않은 공동 설정 작업은 사용자가 별도로 지시할 수 있다.
 
 현재는 폴더와 계약만 준비된 상태다. Next.js 설치와 루트 설정은 별도 초기 설정 작업으로 한 번 수행해야 한다.
+
+<!-- BEGIN:nextjs-agent-rules -->
+
+## This is NOT the Next.js you know
+
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+
+This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+
+<!-- END:nextjs-agent-rules -->

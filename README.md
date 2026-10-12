@@ -1,6 +1,25 @@
 # 음악 플레이리스트 자동 생성 앱
 
-Next.js App Router + TypeScript + Tailwind CSS로 구현할 프로젝트의 분업용 골격입니다. 아직 실행 가능한 앱이나 의존성 설정은 없습니다.
+Next.js App Router + TypeScript + Tailwind CSS 프로젝트입니다. 실행 설정과 1번 UI가 준비되어 있으며, 현재 화면은 임시 32곡·메모리 저장 모듈을 사용합니다. 새로고침하면 임시 목록이 사라집니다.
+
+## 실행
+
+Node.js 20.9 이상이 필요합니다.
+
+```sh
+npm ci
+npm run dev
+```
+
+브라우저에서 http://localhost:3000 에 접속합니다.
+
+```sh
+npm run typecheck
+npm run build
+npm run start
+```
+
+`start`는 빌드 후 프로덕션 서버를 실행합니다. 현재 실행 환경의 Turbopack 내부 포트 제한으로 개발·빌드 명령은 Webpack을 사용합니다. Tailwind CSS v4는 `postcss.config.mjs`의 `@tailwindcss/postcss` 플러그인으로 처리합니다.
 
 ## 구조와 담당
 
@@ -18,7 +37,7 @@ docs/                작업 프롬프트와 연동 계약
 
 ## 시작 순서
 
-1. 별도 초기 설정 작업에서 Next.js, React, TypeScript, Tailwind CSS 및 실행·빌드 설정을 준비합니다. 기존 파일을 보존하세요.
+1. 초기 설정은 완료되었습니다. 새 환경에서는 `npm ci`로 의존성을 설치합니다.
 2. 각 개발자에게 `docs/developer-1-prompt.md`, `docs/developer-2-prompt.md` 내용을 전달합니다.
 3. 두 개발자는 담당 경로만 수정하고 `docs/contracts.md`의 인터페이스를 따릅니다.
 4. 모듈 완성 후 1번이 자기 담당 화면에서 연동합니다.
